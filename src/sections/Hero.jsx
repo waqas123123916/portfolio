@@ -49,18 +49,17 @@ const Hero = () => {
                 Waqas Mehmood
               </h1>
             </div>
-          </div>
-        </div>
-        <div className="relative px-10 text-black ">
-          <div className="absolute inset-x-0 border-t-2">
-            <div className="py-12 text-end sm:py-16">
+                  <div className="border-t-2 px-10">
+            <div className="py-2 text-end sm:py-6">
               <AnimatedTextLines
                 text={aboutText}
                 className="font-light uppercase value-text-responsive"
               />
             </div>
           </div>
+          </div>
         </div>
+       
       </div>
       <figure
         className="absolute inset-0 -z-50"
