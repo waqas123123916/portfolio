@@ -1,66 +1,18 @@
-import React, { useRef } from "react";
-import AnimatedTextLines from "../components/AnimatedTextLines";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+
 import { Canvas } from "@react-three/fiber";
 import { Planet } from "../components/Planet";
 import { Environment, Float, Lightformer } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
+import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 
 const Hero = () => {
   const isMobile = useMediaQuery({maxWidth:768})
-  const contextRef = useRef(null);
-  const headerRef = useRef(null);
-  const aboutText = `I help growing brands and startups gain an
-   unfair advantage through premium
-    results driven webs`;
-
-  useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from(contextRef.current, {
-      y: "50vh",
-      duration: 1,
-      ease: "circ.out",
-    });
-    tl.from(
-      headerRef.current,
-      {
-        opacity: 0,
-        y: "200",
-        duration: 1,
-        ease: "circ.out",
-      },
-      "<+0.5"
-    );
-  }, []);
+ const text = `I help growing brands and startups gain an
+       unfair advantage through premium
+        results driven webs`;
   return (
     <section id="home" className="flex flex-col justify-end min-h-screen">
-      <div ref={contextRef}>
-        <div style={{ clipPath: "polygon(0 1%, 100% 0%, 100% 100%, 0% 100%)" }}>
-          <div
-            ref={headerRef}
-            className="flex flex-col justify-center gap-12 pt-16 sm:gap-16"
-          >
-            <p className="text-sm font-light tracking-[0.5rem] uppercase px-10 text-black ">
-              404 No Bugs Found
-            </p>
-            <div className="px-10">
-              <h1 className="flex flex-col  gap-12 text-black uppercase banner-text-responsive sm:gap-16 md:block">
-                Waqas Mehmood
-              </h1>
-            </div>
-                  <div className="border-t-2 px-10">
-            <div className="py-2 text-end sm:py-6">
-              <AnimatedTextLines
-                text={aboutText}
-                className="font-light uppercase value-text-responsive"
-              />
-            </div>
-          </div>
-          </div>
-        </div>
-       
-      </div>
+ <AnimatedHeaderSection subTitle={'  404 No Bugs Found'} title={'Waqas Mehmood'} text={text} textColor={'text-black'} />
       <figure
         className="absolute inset-0 -z-50"
         style={{ width: "100vw", height: "100vh" }}
