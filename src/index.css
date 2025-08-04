@@ -88,10 +88,10 @@
   font-display: swap;
 }
 @theme {
-  --color-primary: #e5e5e0;
-  --color-DarkLava: #393632;
-  --color-SageGray: #8b8b73;
-  --color-gold: #cfa355;
+  --color-primary: #E6EEF2;
+  --color-DarkLava: #2A3B4C;
+  --color-SageGray: #5A8A8D;
+  --color-gold: #3CAEA3;
   --font-amiamie: "Amiamie", sans-serif;
   --font-amiamie-round: "Amiamie-Round", sans-serif;
 
@@ -107,7 +107,7 @@
 }
 
 body {
-  background: #e5e5e0;
+  background: #E6EEF2;
   color: black;
   scroll-behavior: smooth;
   overflow-x: hidden;
